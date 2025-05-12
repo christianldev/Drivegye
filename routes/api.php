@@ -2,21 +2,20 @@
 
 /*
 |--------------------------------------------------------------------------
-| API Routes
+| API Rutas
 |--------------------------------------------------------------------------
 |
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
+| Aquí puedes registrar las rutas de API para tu aplicación. 
+| Estas rutas las carga el RouteServiceProvider dentro de un grupo al que se le asigna el grupo de middleware "api".
 |
 */
 
 // cron request for schedule ride
 Route::match(['post','get'],'web_payment', 'PaymentController@payment')->name('paypal.view');
-// Flutter Wave
-Route::match(['post','get'],'flutterwave_web_payment', 'FlutterwaveController@flutterwave');
-Route::match(['post','get'],'flutterwave_payment', 'FlutterwaveController@flutterwave_payment')->name('payment.flutterwave');
-Route::match(['post','get'],'flutterwave_callback', 'FlutterwaveController@futterwave_callback');
+// Flutter
+//Route::match(['post','get'],'flutterwave_web_payment', 'FlutterwaveController@flutterwave');
+//Route::match(['post','get'],'flutterwave_payment', 'FlutterwaveController@flutterwave_payment')->name('payment.flutterwave');
+//Route::match(['post','get'],'flutterwave_callback', 'FlutterwaveController@futterwave_callback');
 // Mpesa
 Route::match(['post','get'],'mpesa_web_payment', 'MpesaController@mpesa');
 Route::match(['post','get'],'mpesa_payment', 'MpesaController@customerMpesaSTKPush')->name('payment.mpesa');
