@@ -24,7 +24,7 @@
                 <img class="mr-2" src="images/new/app.png"  alt="app"></a>
                   @endif
                 <div class="divider-text mt-25 mb-25"><span class="bg-light-gray">OR</span></div>
-	             @if($app_links[2]->value !="" )
+                @if (!empty($app_links) && isset($app_links[0]) && $app_links[0]->value != "")
                 <a href="{{$app_links[2]->value}}" class="btn btn-primary d-flex align-items-center justify-content-center bg-app"target="_blank">
                 <img class="mr-2" src="{{ url('images/new/google.png') }}" alt="Get it on Googleplay"></a>
                 @endif
