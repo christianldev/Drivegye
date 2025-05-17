@@ -19,7 +19,7 @@
             <div class="col-xl-5 col-lg-6 order-lg-0">
                 <h2 class="h1 mb-20">{{trans('messages.home.title')}}</h2>
                 <p>{{trans('messages.home.desc')}}</p>
-                  @if($app_links[0]->value !="" )
+                @if (!empty($app_links) && isset($app_links[0]) && $app_links[0]->value != "")
                 <a href="{{$app_links[0]->value}}" class="btn btn-primary d-flex align-items-center justify-content-center bg-app"target="_blank">
                 <img class="mr-2" src="images/new/app.png"  alt="app"></a>
                   @endif

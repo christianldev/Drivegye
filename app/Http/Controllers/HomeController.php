@@ -27,8 +27,7 @@ class HomeController extends Controller
      **/
     public function index()
     {
-        $app_links = AppLink::all(); // o cualquier lógica
-        return view('home.home', compact('app_links'));
+        return view('home.home');
     }
 
     /**
