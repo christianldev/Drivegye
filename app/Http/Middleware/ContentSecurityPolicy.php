@@ -18,8 +18,14 @@ class ContentSecurityPolicy
 
         $response->headers->set(
             'Content-Security-Policy',
-            "default-src 'self'; style-src 'self' 'unsafe-inline' *.googleapis.com *.bootstrapcdn.com;"
+            "default-src 'self'; " .
+                "img-src 'self' data: https://drivegye-production.up.railway.app; " .
+                "style-src 'self' 'unsafe-inline' *.googleapis.com *.bootstrapcdn.com; " .
+                "script-src 'self' 'unsafe-inline' *.googleapis.com *.bootstrapcdn.com; " .
+                "font-src 'self' *.googleapis.com *.gstatic.com *.bootstrapcdn.com; " .
+                "frame-ancestors 'self';"
         );
+
 
         return $response;
     }
